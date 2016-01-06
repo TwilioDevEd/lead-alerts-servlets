@@ -5,7 +5,7 @@
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
          version="3.0">
     <welcome-file-list>
-        <welcome-file>home.html</welcome-file>
+        <welcome-file>home.jsp</welcome-file>
     </welcome-file-list>
     <servlet>
         <servlet-name>home</servlet-name>
@@ -14,6 +14,6 @@
 
     <servlet-mapping>
         <servlet-name>home</servlet-name>
-        <url-pattern>/</url-pattern>
+        <url-pattern>/home</url-pattern>
     </servlet-mapping>
 </web-app>

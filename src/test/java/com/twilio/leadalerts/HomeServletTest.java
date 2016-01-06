@@ -5,6 +5,7 @@ import org.junit.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.PrintWriter;
@@ -22,6 +23,9 @@ public class HomeServletTest {
     HttpServletResponse response;
 
     @Mock
+    RequestDispatcher requestDispatcher;
+
+    @Mock
     PrintWriter printWriter;
 
     @Before
@@ -32,11 +36,11 @@ public class HomeServletTest {
     @Test
     public void testDoGet() throws Exception {
 
-        when(response.getWriter()).thenReturn(printWriter);
-        HomeServlet servlet = new HomeServlet();
+        when(request.getRequestDispatcher(anyString())).thenReturn(requestDispatcher);
 
+        HomeServlet servlet = new HomeServlet();
         servlet.doGet(request, response);
 
-        verify(printWriter).write(anyString());
+        verify(request).getRequestDispatcher("home.jsp");
     }
 }
