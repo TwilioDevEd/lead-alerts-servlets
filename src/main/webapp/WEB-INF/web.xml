@@ -11,9 +11,17 @@
         <servlet-name>home</servlet-name>
         <servlet-class>com.twilio.leadalerts.HomeServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>notifications</servlet-name>
+        <servlet-class>com.twilio.leadalerts.NotificationsServlet</servlet-class>
+    </servlet>
 
     <servlet-mapping>
         <servlet-name>home</servlet-name>
         <url-pattern>/home</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>notifications</servlet-name>
+        <url-pattern>/notifications</url-pattern>
     </servlet-mapping>
 </web-app>

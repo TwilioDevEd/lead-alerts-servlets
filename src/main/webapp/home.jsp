@@ -14,6 +14,22 @@
 </head>
 <body>
     <div id="main" class="container">
+        <core:if test="${not empty success}">
+            <div class="alert alert-success" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                ${success}
+            </div>
+        </core:if>
+        <core:if test="${not empty error}">
+            <div class="alert alert-danger" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                ${error}
+            </div>
+        </core:if>
         <div class="row">
             <div class="col-sm-8">
                 <h1>${houseTitle}</h1>
@@ -28,7 +44,7 @@
                     questions you might have about this property. Fill out the form below
                     with your contact information, and an agent will reach out soon.
                 </p>
-                <form>
+                <form action="/notifications" method="POST">
                     <input type="hidden" name="houseTitle" value="${houseTitle}" />
                     <div class="form-group">
                         <label for="name">Your Name</label>

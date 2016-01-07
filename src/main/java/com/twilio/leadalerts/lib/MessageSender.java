@@ -24,14 +24,10 @@ public class MessageSender {
         this.client = client;
     }
 
-    public void send(String message) {
+    public void send(String message) throws TwilioRestException {
         List<NameValuePair> params = buildParams(message);
 
-        try {
-            client.getAccount().getMessageFactory().create(params);
-        } catch (TwilioRestException exception) {
-            exception.printStackTrace();
-        }
+        client.getAccount().getMessageFactory().create(params);
     }
 
     private List<NameValuePair> buildParams(String message) {
