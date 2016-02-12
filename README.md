@@ -20,8 +20,8 @@ a real estate listing or other high value channel.
    ```bash
    $ export TWILIO_ACCOUNT_SID=Your Twilio Account SID
    $ export TWILIO_AUTH_TOKEN=Your Twilio Auth Token
-   $ export TWILIO_NUMBER=Your Twilio Phone Number
-   $ export AGENT_NUMBER=The Agent's Phone Number
+   $ export TWILIO_PHONE_NUMBER=Your Twilio Phone Number
+   $ export AGENT_PHONE_NUMBER=The Agent's Phone Number
    ```
 
 1. Run the application.
