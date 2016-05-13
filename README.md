@@ -19,6 +19,7 @@ a real estate listing or other high value channel.
 1. Export the environment variables:
 
    You can find the `AccountSID` and the `AuthToken` at https://www.twilio.com/user/account/settings.
+
    ```bash
    $ export TWILIO_ACCOUNT_SID=Your Twilio Account SID
    $ export TWILIO_AUTH_TOKEN=Your Twilio Auth Token
@@ -27,6 +28,7 @@ a real estate listing or other high value channel.
    ```
 
 1. Run the application.
+
    ```bash
    $ ./gradlew jettyRun
    ```
