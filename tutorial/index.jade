@@ -6,9 +6,9 @@
       ## What Are We Building?
 
       You probably already have landing pages or product detail views in your
-      web application, which you're using to generate leads for your business. 
-      In this tutorial, we'll use Twilio SMS to send a message when a new lead
-      is found.
+      web application, which you're using to generate leads for your business.
+      On this tutorial we'll use Twilio SMS to send a message when a new lead
+      is found..
 
       ![Lead Alerts Flow](//s3.amazonaws.com/howtodocs/lead-alerts-flow.png)
 
@@ -16,17 +16,17 @@
       (much like [our awesome friends at
       Trulia](//www.twilio.com/customers/stories/trulia)). We'll create a
       landing page for a new house on the market, and notify a real estate agent
-      the moment a potential customer requests information. 
+      the moment a potential customer requests information.
 
       Let's see how it works! Click the next arrow above to continue the tutorial.
 
   .step(
-    data-title='Landing Page Data', 
+    data-title='Landing Page Data',
     data-file='src/main/java/com/twilio/leadalerts/HomeServlet.java')
     :markdown
       ## Landing Page Data
 
-      To display a landing page for our house, we'll first need some data about
+      To display a landing page for our house, we need some data about
       the fictional house we've put on the market. For demonstration purposes,
       we've hard-coded the information we need.
 
@@ -35,13 +35,13 @@
       **See Also:**
       * [What is a Java Servlet?](//docs.oracle.com/javaee/6/tutorial/doc/bnafe.html)
 
-  .step(data-title='Rendering the Landing Page', 
+  .step(data-title='Rendering the Landing Page',
     data-file='src/main/webapp/home.jsp')
     :markdown
       ## Rendering the Landing Page
 
-      In our landing page, we'll insert data about the house. We'll use a sidebar to include 
-      a form for the user to enter in their contact information. 
+      In our landing page, we'll insert data about the house. We'll use a sidebar to include
+      a form for the user to enter in their contact information.
       That way, they can request more info about the home.
 
       ---
@@ -50,16 +50,14 @@
       * [JSP Standard Tag Library](//jstl.java.net/)
 
   .step(
-    data-title='Creating a Twilio API Client', 
+    data-title='Creating a Twilio API Client',
     data-file='src/main/java/com/twilio/leadalerts/lib/MessageSender.java',
     data-highlight='14-42')
     :markdown
       ## Creating a Twilio REST API Client
 
-      Here we create a helper class with an authenticated Twilio REST
-      API client that we can use anytime we need to send a text message. We
-      initialize it with our [Twilio Account Credentials](//www.twilio.com/user/account/messaging/dashboard) 
-      stored as environment variables.
+      Here we create a helper class with an authenticated [Twilio REST
+      API](https://twilio.github.io/twilio-java/com/twilio/sdk/TwilioRestClient.html) client that we can use anytime we need to send a text message. We initialize it with our [Twilio Account Credentials](//www.twilio.com/user/account/messaging/dashboard) that are stored as environment variables.
 
       ---
 
@@ -67,16 +65,15 @@
       * [Twilio SMS and MMS Quickstart](//www.twilio.com/docs/quickstart/java/sms/sending-via-rest)
 
   .step(
-    data-title='Handling the POST Request', 
+    data-title='Handling the POST Request',
     data-file='src/main/java/com/twilio/leadalerts/NotificationsServlet.java',
-    data-highlight='25-42')
+    data-highlight='25-42,14')
     :markdown
       ## Handling the POST Request
 
-      This code handles the HTTP `POST` request issued by our landing page. It 
-      uses our `MessageSender` class to send a SMS message to the real estate 
-      agent's phone number, which is also set as a environment variable. We 
-      include the lead's name, phone number, and inquiry directly into the body of 
+      This code handles the HTTP `POST` request issued by our landing page. It
+      uses our `MessageSender` class to send a SMS message to the real estate
+      agent's phone number, which is also set as a environment variable. We include the lead's name, phone number, and inquiry directly into the body of
       the text message we send to the agent.
 
       Now the agent has all the information they need to immediately follow up on the lead.
@@ -90,10 +87,8 @@
     :markdown
       ## Where to next?
 
-      That's it! We've just implemented an application to instantly route leads
-      to sales people using text messages. If you're a
-      Java developer working with Twilio, you might want to check out these
-      other tutorials.
+      That's it! We've just implemented an application to instantly route leads to sales people using text messages. If you're a
+      Java developer working with Twilio, you might want to check out these other tutorials.
 
       [**Click-To-Call**](//www.twilio.com/docs/tutorials/walkthrough/click-to-call/java/servlets)
 
@@ -108,6 +103,5 @@
       ### Did this help?
 
       Thanks for checking out this tutorial! If you have any feedback
-      to share with us, we'd love to hear it. Tweet
-      [@twilio](//twitter.com/twilio) to let us know what you
-      think.
+      to share with us, we'd love to hear it.
+      [Contact the Twilio Developer Education Team](mailto:deved-oss@twilio.com) to let us know what you think.
