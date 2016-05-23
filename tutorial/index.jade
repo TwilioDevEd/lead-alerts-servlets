@@ -5,8 +5,8 @@
     :markdown
       ## What Are We Building?
 
-      You probably already have landing pages or product detail views in your
-      web application, which you're using to generate leads for your business.
+      You probably already have landing pages or product detail views -- that you're
+      using to generate leads for your business-- on your web application.
       On this tutorial we'll use Twilio SMS to send a message when a new lead
       is found..
 
@@ -15,8 +15,8 @@
       In this example we'll be implementing instant lead alerts for real estate
       (much like [our awesome friends at
       Trulia](//www.twilio.com/customers/stories/trulia)). We'll create a
-      landing page for a new house on the market, and notify a real estate agent
-      the moment a potential customer requests information.
+      landing page for a new house on the market and a notification, that a potential
+      customer requests information, for a real estate agent.
 
       Let's see how it works! Click the next arrow above to continue the tutorial.
 
@@ -27,7 +27,7 @@
       ## Landing Page Data
 
       To display a landing page for our house, we need some data about
-      the fictional house we've put on the market. For demonstration purposes,
+      the fictional house we've put on the market. For demonstration purposes
       we've hard-coded the information we need.
 
       ---
@@ -42,7 +42,7 @@
 
       In our landing page, we'll insert data about the house. We'll use a sidebar to include
       a form for the user to enter in their contact information.
-      That way, they can request more info about the home.
+      That way they can request more info about the home.
 
       ---
 
@@ -72,11 +72,12 @@
       ## Handling the POST Request
 
       This code handles the HTTP `POST` request issued by our landing page. It
-      uses our `MessageSender` class to send a SMS message to the real estate
-      agent's phone number, which is also set as a environment variable. We include the lead's name, phone number, and inquiry directly into the body of
+      uses our `MessageSender` class to send an SMS message to the real estate
+      agent's phone number, which is also set as a environment variable. We include
+      the lead's name, phone number, and inquiry directly into the body of
       the text message we send to the agent.
 
-      Now the agent has all the information they need to immediately follow up on the lead.
+      Now the agent has all the information he/she needs to immediately follow up on the lead.
 
       ---
 
@@ -88,7 +89,7 @@
       ## Where to next?
 
       That's it! We've just implemented an application to instantly route leads to sales people using text messages. If you're a
-      Java developer working with Twilio, you might want to check out these other tutorials.
+      Java developer working with Twilio, you might want to check these other tutorials out.
 
       [**Click-To-Call**](//www.twilio.com/docs/tutorials/walkthrough/click-to-call/java/servlets)
 
@@ -102,6 +103,6 @@
 
       ### Did this help?
 
-      Thanks for checking out this tutorial! If you have any feedback
+      Thanks for checking this tutorial out! If you have any feedback
       to share with us, we'd love to hear it.
       [Contact the Twilio Developer Education Team](mailto:deved-oss@twilio.com) to let us know what you think.
