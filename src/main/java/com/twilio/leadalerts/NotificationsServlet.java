@@ -1,7 +1,6 @@
 package com.twilio.leadalerts;
 
 import com.twilio.leadalerts.lib.MessageSender;
-import com.twilio.sdk.TwilioRestException;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -33,7 +32,7 @@ public class NotificationsServlet extends HttpServlet {
         try {
             messageSender.send(formattedMessage);
             request.setAttribute("success", "Thanks! An agent will be contacting you shortly.");
-        } catch (TwilioRestException e) {
+        } catch (Exception e) {
             e.printStackTrace();
             request.setAttribute("error", "Oops! There was an error. Please try again.");
         }
