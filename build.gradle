@@ -14,8 +14,10 @@ repositories {
 dependencies {
     compile 'javax.servlet:javax.servlet-api:3.1.0'
     compile 'org.eclipse.jetty:jetty-annotations:9.3.6.v20151106'
-    compile 'com.twilio.sdk:twilio-java-sdk:5.8.0'
+    compile 'com.twilio.sdk:twilio:7.0.0-rc-25'
+
 
     testCompile 'junit:junit:4.12'
     testCompile 'org.mockito:mockito-all:1.10.19'
+
 }
