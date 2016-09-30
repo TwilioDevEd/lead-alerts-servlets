@@ -25,7 +25,7 @@ public class MessageSender {
                 new PhoneNumber(PhoneNumbers.getAgentPhoneNumber()),
                 new PhoneNumber(PhoneNumbers.getTwilioPhoneNumber()),
                 message
-        ).execute(client);
+        ).create(client);
     }
 
 }

@@ -4,6 +4,8 @@ This demo application shows how to implement instant lead alerts using Java and
 Servlets. Notify sales reps or agents right away when a new lead comes in for
 a real estate listing or other high value channel.
 
+[Read the full tutorial here](https://www.twilio.com/docs/tutorials/walkthrough/lead-alerts/java/servlets)!
+
 [![Build Status](https://travis-ci.org/TwilioDevEd/lead-alerts-servlets.svg)](https://travis-ci.org/TwilioDevEd/lead-alerts-servlets)
 
 ## Local Development
@@ -17,6 +19,7 @@ a real estate listing or other high value channel.
 1. Export the environment variables:
 
    You can find the `AccountSID` and the `AuthToken` at https://www.twilio.com/user/account/settings.
+
    ```bash
    $ export TWILIO_ACCOUNT_SID=Your Twilio Account SID
    $ export TWILIO_AUTH_TOKEN=Your Twilio Auth Token
@@ -25,6 +28,7 @@ a real estate listing or other high value channel.
    ```
 
 1. Run the application.
+
    ```bash
    $ ./gradlew jettyRun
    ```
