@@ -30,7 +30,7 @@ a real estate listing or other high value channel.
 1. Run the application.
 
    ```bash
-   $ ./gradlew jettyRun
+   $ ./gradlew appRun
    ```
 
 1. Check it out at [http://localhost:8080/home](http://localhost:8080/home)
