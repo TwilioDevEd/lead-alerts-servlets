@@ -8,6 +8,8 @@ a real estate listing or other high value channel.
 
 [![Build Status](https://travis-ci.org/TwilioDevEd/lead-alerts-servlets.svg)](https://travis-ci.org/TwilioDevEd/lead-alerts-servlets)
 
+> We are currently in the process of updating this sample template. If you are encountering any issues with the sample, please open an issue at [github.com/twilio-labs/code-exchange/issues](https://github.com/twilio-labs/code-exchange/issues) and we'll try to help you.
+
 ## Local Development
 
 1. Clone this repository and `cd` into its directory:
