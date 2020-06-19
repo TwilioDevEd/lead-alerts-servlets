@@ -8,6 +8,10 @@ import java.io.IOException;
 
 public class HomeServlet extends HttpServlet {
 
+    @SuppressWarnings("unused")
+    public HomeServlet() {
+    }
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         request.setAttribute("houseTitle", "555 Sunnybrook Lane");

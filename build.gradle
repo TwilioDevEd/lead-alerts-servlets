@@ -1,33 +1,42 @@
+plugins {
+    id 'java'
+    id 'org.gretty' version '3.0.1'
+}
+
 group 'com.twilio'
 version '1.0'
-
-apply plugin: 'java'
-apply plugin: 'war'
-apply from: 'https://raw.github.com/akhikhl/gretty/master/pluginScripts/gretty.plugin'
 
 gretty {
     httpPort = 8080
     contextPath = ''
     logbackConfigFile = "src/main/resources/logback.xml"
-    jettyXmlFile = "src/main/resources/jetty-logback-access.xml"
 }
 
-sourceCompatibility = 1.8
+sourceCompatibility = 11
 
 repositories {
-    mavenCentral()
+    jcenter()
 }
 
 dependencies {
-    compile 'ch.qos.logback:logback-classic:1.2.2'
-    compile 'ch.qos.logback:logback-access:1.2.2'
-    compile 'javax.servlet:javax.servlet-api:3.1.0'
-    compile 'org.eclipse.jetty:jetty-annotations:9.3.6.v20151106'
-    compile 'com.twilio.sdk:twilio:7.0.0-rc-29'
+    def logbackVersion='1.2.3'
+    implementation(group: 'javax.servlet', name:'javax.servlet-api', version: '4.0.1')
+    implementation(group: 'javax.servlet', name:'jstl', version:'1.2')
+    implementation(group: 'com.twilio.sdk', name:'twilio', version: '7.48.0')
+    implementation(group: 'ch.qos.logback', name:'logback-classic', version:"${logbackVersion}")
+    implementation(group: 'ch.qos.logback', name:'logback-access', version:"${logbackVersion}")
 
-    gretty 'ch.qos.logback:logback-classic:1.2.2'
-    gretty 'ch.qos.logback:logback-access:1.2.2'
+    testImplementation(group: 'junit', name:'junit', version: '4.13')
+    testImplementation(group: 'org.mockito', name:'mockito-core', version: '3.3.3')
+}
 
-    testCompile 'junit:junit:4.12'
-    testCompile 'org.mockito:mockito-all:1.10.19'
+test {
+    useJUnit()
+    reports {
+        junitXml.enabled = false
+        html.enabled = false
+    }
+    testLogging {
+        exceptionFormat = "full"
+    }
 }

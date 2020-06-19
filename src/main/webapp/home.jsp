@@ -48,15 +48,15 @@
                     <input type="hidden" name="houseTitle" value="${houseTitle}" />
                     <div class="form-group">
                         <label for="name">Your Name</label>
-                        <input type="text" id="name" name="name" class="form-control" placeholder="John Appleseed" />
+                        <input type="text" id="name" name="name" class="form-control" placeholder="John Appleseed" required />
                     </div>
                     <div class="form-group">
                         <label for="phone">Your Phone Number</label>
-                        <input type="text" id="phone" name="phone" class="form-control" placeholder="+16512229988" />
+                        <input type="text" id="phone" name="phone" class="form-control" placeholder="+16512229988" required />
                     </div>
                     <div class="form-group">
                         <label for="message">How can we help?</label>
-                        <input type="text" id="message" name="message" class="form-control" />
+                        <input type="text" id="message" name="message" class="form-control" required />
                     </div>
                     <button type="submit" class="btn btn-primary">Request Info</button>
                 </form>
