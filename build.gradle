@@ -27,7 +27,7 @@ dependencies {
     implementation(group: 'ch.qos.logback', name:'logback-access', version:"${logbackVersion}")
 
     testImplementation(group: 'junit', name:'junit', version: '4.13')
-    testImplementation(group: 'org.mockito', name:'mockito-core', version: '3.3.3')
+    testImplementation(group: 'org.mockito', name:'mockito-core', version: '3.5.0')
 }
 
 test {
