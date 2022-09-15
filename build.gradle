@@ -19,7 +19,7 @@ repositories {
 }
 
 dependencies {
-    def logbackVersion='1.2.3'
+    def logbackVersion='1.4.1'
     implementation(group: 'javax.servlet', name:'javax.servlet-api', version: '4.0.1')
     implementation(group: 'javax.servlet', name:'jstl', version:'1.2')
     implementation(group: 'com.twilio.sdk', name:'twilio', version: '8.11.0')
